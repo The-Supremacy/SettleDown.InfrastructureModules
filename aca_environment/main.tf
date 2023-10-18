@@ -13,10 +13,7 @@ resource "azurerm_container_app_environment" "cae" {
   log_analytics_workspace_id                  = var.log_workspace_workspace_id
   dapr_application_insights_connection_string = module.dapr_ai.ai_connection_string
 
-  tags = {
-    Area        = "Shared infrastructure"
-    Environment = "Dev"
-  }
+  tags = var.tags
 
   depends_on = [
     module.dapr_ai

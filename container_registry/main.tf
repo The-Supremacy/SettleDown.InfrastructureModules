@@ -1,10 +1,7 @@
 resource "azurerm_resource_group" "acr_rg" {
   name     = "rg-settledown-acr-shd-ne-001"
   location = "North Europe"
-  tags = {
-    Area        = "Dev infrastructure"
-    Environment = "Shared"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_container_registry" "acr" {
@@ -14,10 +11,7 @@ resource "azurerm_container_registry" "acr" {
   sku                           = "Basic"
   admin_enabled                 = true
   public_network_access_enabled = true
-  tags = {
-    Area        = "Dev infrastructure"
-    Environment = "Shared"
-  }
+  tags = var.tags
   depends_on = [
     azurerm_resource_group.acr_rg
   ]

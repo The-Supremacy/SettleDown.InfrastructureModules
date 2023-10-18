@@ -5,8 +5,5 @@ resource "azurerm_application_insights" "ai" {
   workspace_id        = var.log_workspace_id
   application_type    = "web"
 
-  tags = {
-    Area        = "Shared infrastructure"
-    Environment = "Dev"
-  }
+  tags = var.tags
 }

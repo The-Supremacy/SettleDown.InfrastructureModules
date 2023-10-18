@@ -5,8 +5,5 @@ resource "azurerm_log_analytics_workspace" "workspace" {
   sku                             = "PerGB2018"
   retention_in_days               = 30
   allow_resource_only_permissions = true
-  tags = {
-    Area        = "Shared infrastructure"
-    Environment = "Dev"
-  }
+  tags = var.tags
 }

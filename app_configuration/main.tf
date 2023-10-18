@@ -5,10 +5,7 @@ resource "azurerm_app_configuration" "app_config" {
   sku                   = "free"
   local_auth_enabled    = true
   public_network_access = "Enabled"
-  tags = {
-    Area        = "Shared infrastructure"
-    Environment = "Dev"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_role_assignment" "role_assignment" {

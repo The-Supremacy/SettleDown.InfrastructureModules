@@ -9,3 +9,7 @@ variable "location" {
 
 variable "shared_identity_principal_id" {
 }
+
+variable "tags" {
+  default = {}
+}

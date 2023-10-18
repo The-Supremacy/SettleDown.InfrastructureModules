@@ -12,3 +12,7 @@ variable "log_workspace_workspace_id" {
 
 variable "location" {
 }
+
+variable "tags" {
+  default = {}
+}

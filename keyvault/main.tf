@@ -18,10 +18,7 @@ resource "azurerm_key_vault" "key_vault" {
     bypass         = "AzureServices"
   }
 
-  tags = {
-    Area        = "Shared infrastructure"
-    Environment = "Dev"
-  }
+  tags = var.tags
 }
 
 resource "azurerm_role_assignment" "role_assignment" {
