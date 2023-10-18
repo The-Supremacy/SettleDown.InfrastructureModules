@@ -4,6 +4,7 @@ module "dapr_ai" {
   location         = var.location
   ai_name          = var.ai_name
   log_workspace_id = var.log_workspace_workspace_id
+  tags = var.tags
 }
 
 resource "azurerm_container_app_environment" "cae" {
